@@ -1,0 +1,188 @@
+<!-- Page for submitting room ratings. Kim Merrill & Richard Yannow -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="resLife.css" />
+	<title>Room Ratings</title>
+</head>
+
+<body>
+	<!-- Fixed navbar with links to the other pages. -->
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li class="brand"><a title="Home" href="index.html" class="min">
+						<img alt="logo" src="logo.gif"></img></a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li><a title="Welcome page" href="index.html">Home</a></li>
+					<li class="active"><a href="">Ratings</a></li>
+					<li><a title="Find your friends" href="student.html">Students</a></li>
+					<li><a title="Search by room" href="room.html">Rooms</a></li>
+					<li><a title="Search by suite" href="suite.html">Suites</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="padded-top">
+	<div class="jello">
+		<h2>Rate your current room</h2>
+	
+	
+		<!-- Form for inputting room rating info. -->		
+		<form action="rate" class="form-inline well">
+	
+			<div class="control-group pull-right">
+				<label for="comment">Comment:</label><br/>
+				<textarea rows="4" name="comment"></textarea>
+			</div>
+			
+			<div class="control-group">
+			<label for="roomten">Room number:</label>
+			<select name="roomtens" class="span1">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+			</select>
+			<select name="roomones" class="span1">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+			</select>
+			</div>
+	
+			<div class="control-group">
+			<label for="dorm" class="control-label">Dorm:</label>
+			<select name="dorm" class="span2">
+				<option>B Hall</option>
+				<option>Blaisdell</option>
+				<option>Clark I</option>
+				<option>Clark III</option>
+				<option>Clark V</option>
+				<option>Gibson</option>
+				<option>Harwood</option>
+				<option>Mudd</option>
+				<option>Lawry</option>
+				<option>Lyon</option>
+				<option>Norton</option>
+				<option>Oldenborg</option>
+				<option>Smiley</option>
+				<option>Sontag</option>
+				<option>Walker</option>
+				<option>Wig</option>
+			</select>
+			
+			<label for="floor">Floor:</label>
+			<select name="floor" class="span2">
+				<option value="0">Basement</option>
+				<option value="1" selected="selected">First</option>
+				<option value="2">Second</option>
+				<option value="3">Third</option>
+			</select>
+		</div>	
+			
+		<div class="control-group">	
+			<label for="semester">Semester lived in:</label>
+			<input id="fall" type="radio" name="semester" value="fall" checked="checked"></input>
+			<label class="check" for="fall">Fall</label>	
+			<input id="spring" type="radio" name="semester" value="spring"></input>
+			<label class="check" for="spring">Spring</label>
+			<input id="summer" type="radio" name="semester" value="summer"></input>
+			<label class="check" for="summer">Summer</label>
+		</div>
+		
+		<div class="control-group">	
+			<label for="year">Year lived in:</label>
+			<select name="year" class="input-small">
+				<option value="2002">2002</option>
+				<option value="2003">2003</option>
+				<option value="2004">2004</option>
+				<option value="2005">2005</option>
+				<option value="2006">2006</option>
+				<option value="2007">2007</option>
+				<option value="2008">2008</option>
+				<option value="2009">2009</option>
+				<option value="2010">2010</option>
+				<option value="2011">2011</option>
+				<option value="2012" selected="selected">2012</option>
+			</select>
+			<span class="pull-right help-block">
+				To avoid rating bias, only one review may be submitted per semester.
+			</span>	
+		</div>
+		
+		<!-- Rating scales from 1 to 5. -->
+		<div class="control-group center">	
+			<label for="cell" class="radio">Cell service</label>
+			<input id="1" type="radio" name="cell" value="1" checked="checked"></input>
+			<label class="small-check" for="1">1</label>
+			<input id="2" type="radio" name="cell" value="2"></input>
+			<label class="small-check" for="2">2</label>
+			<input id="3" type="radio" name="cell" value="3"></input>
+			<label class="small-check" for="3">3</label>
+			<input id="4" type="radio" name="cell" value="4"></input>
+			<label class="small-check" for="4">4</label>
+			<input id="5" type="radio" name="cell" value="5"></input>
+			<label class="small-check" for="5">5</label>
+			
+			<label for="noise" class="radio">Quiet</label>
+			<input id="1" type="radio" name="noise" value="1" checked="checked"></input>
+			<label class="small-check" for="1">1</label>
+			<input id="2" type="radio" name="noise" value="2"></input>
+			<label class="small-check" for="2">2</label>
+			<input id="3" type="radio" name="noise" value="3"></input>
+			<label class="small-check" for="3">3</label>
+			<input id="4" type="radio" name="noise" value="4"></input>
+			<label class="small-check" for="4">4</label>
+			<input id="5" type="radio" name="noise" value="5"></input>
+			<label class="small-check" for="5">5</label>
+			
+			<label for="view" class="radio">View</label>
+			<input id="1" type="radio" name="view" value="1" checked="checked"></input>
+			<label class="small-check" for="1">1</label>
+			<input id="2" type="radio" name="view" value="2"></input>
+			<label class="small-check" for="2">2</label>
+			<input id="3" type="radio" name="view" value="3"></input>
+			<label class="small-check" for="3">3</label>
+			<input id="4" type="radio" name="view" value="4"></input>
+			<label class="small-check" for="4">4</label>
+			<input id="5" type="radio" name="view" value="5"></input>
+			<label class="small-check" for="5">5</label>
+		</div>
+			
+		<div class="controls center">
+			<input type="submit" value="Submit" class="btn btn-info btn-large"></input>
+		</div>
+			
+	</form>
+	
+	<footer>
+        <p>Created by Kim Merrill and Richard Yannow<br></br></p>
+    </footer>
+
+</div>
+</div>
+
+</body>
+</html>
